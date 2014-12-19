@@ -1,0 +1,33 @@
+Documentation of Frogger:
+
+
+the gamer is running on fixed size of carven: 1024x583
+consists with one frog and list of vehicle(arraylist) and list of floater(arraylist).
+
+the background is made several rectangle images, roadlines are drwan by using recursive method.
+the height of any object in the game (frog, floters, vehicle) are 50 pixel. the line of road is 2 pixel. Therefore, a frog would move 50 + 2 pixel each time when a player press up key or down key.
+if press left or right, the frog will move left or right 50 pixel.
+There is no other key event command.
+
+
+There's abstract vehicle class and floater class,
+each class extends these two class has indicator of its image.
+abstract class tracks every single objects cartitian poing and the method of determining crush (for car) and carrying(for floater).
+possible vehicles are: ambulance, police car, motorcycle, regular car (audi!)
+possible floaters are: wood and leaf.
+
+onTick event: each vehicle and floater will move (this.width + this.loc.x + this.velocityX) % width each tick to direction whatever is assigned.
+The world ends when the live counts to zero. 
+froghit and frogdrowned method would modified(reduce) the life. this are method represent the death of the frog
+If the frog pass through everything, a player will earn 1 point.
+There is no other way to end the world other than make the life become zero.
+the purpose is to let player earn the highest score within given 3 chance.
+
+
+
+
+
+
+
+
+
